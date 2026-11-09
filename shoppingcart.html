@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <div class="headerContainer">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.webp" alt="logo" loading="lazy" />
+      </a>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="headerLinks" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="ourshop.html">Our Shop</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="cartItems" class="cart-container"></div>
+  <div class="cart-total" id="cartTotal">Total: 0 DA</div>
+  <div class="cart-controls">
+    <button onclick="clearCart()" class="btn" style="background-color: #7f8c8d;">Empty Cart</button>
+    <button onclick="confirmOrder()" class="btn">Confirm Order</button>
+  </div>
+
+  <script src="cart.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  }
+});
+  </script>
+</body>
+</html>

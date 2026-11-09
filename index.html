@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Coffee Shop</title>
+</head>
+<body>
+  <div class="headerContainer">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.webp" alt="logo" loading="lazy" />
+      </a>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <div class="headerLinks" id="navLinks">
+        <a href="ourshop.html">Our Shop</a>
+        <a href="shoppingcart.html">Shopping Cart</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="signin.html" class="btn">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="landingPageContainer">
+    <div class="landingPage">
+      <div>
+        <p class="welcome">Welcome to CS</p>
+        <h1 class="slogan">Best Coffee Site Ever</h1>
+        <div class="searchBar">
+          <input type="text" placeholder="Search coffee..." />
+          <button class="btn">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trendingContainer">
+    <div class="trendingHeader">
+      <h1 class="trending">Our Trending Coffee Selection</h1>
+      <a href="ourshop.html" class="btn">View All</a>
+    </div>
+    <div class="trendingCard">
+      <div class="card">
+        <img src="images/espresso.webp" loading="lazy" alt="Espresso" />
+        <div class="cardInfo">
+          <div class="cardName">
+            <p>COFFEE</p>
+            <div class="headerLink"><a href="#">ESPRESSO</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iced coffee.webp" loading="lazy" alt="Iced Coffee" />
+        <div class="cardInfo">
+          <div class="cardName">
+            <p>COFFEE</p>
+            <div class="headerLink"><a href="#">ICED COFFEE</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/americano.webp" loading="lazy" alt="Americano" />
+        <div class="cardInfo">
+          <div class="cardName">
+            <p>COFFEE</p>
+            <div class="headerLink"><a href="#">AMERICANO</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/turck coffe.webp" loading="lazy" alt="Turkish Coffee" />
+        <div class="cardInfo">
+          <div class="cardName">
+            <p>COFFEE</p>
+            <div class="headerLink"><a href="#">TURKCOFFEE</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="productModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modalImage" src="" alt="product image" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalPrice" style="font-weight: bold; margin: 10px 0;"></p>
+      <button id="addToOrderBtn" class="btn">Add To Cart</button>
+    </div>
+  </div>
+
+  <div class="footerContainer">
+    <div class="footer">
+      <p>&copy; 2026 CS Company. All rights reserved.</p>
+      <a href="https://www.instagram.com/_hafidi_amine_/" target="_blank" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <script src="prices.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  }
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>contactUs</title>
+</head>
+<body>
+  <div class="headerContainer">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.webp" alt="logo" loading="lazy" />
+      </a>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="headerLinks" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="ourshop.html">Our Shop</a>
+        <form action="signin.html">
+          <button class="btn">sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="formContainer">
+    <form action="index.html">
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <textarea
+        name="question"
+        cols="30"
+        rows="10"
+        placeholder="Any Question"
+      ></textarea>
+      <button class="btn">Send</button>
+    </form>
+  </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  }
+});
+  </script>
+
+</body>

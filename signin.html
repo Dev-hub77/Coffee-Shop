@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sign In - Coffee Shop</title>
+</head>
+<body>
+  <div class="headerContainer">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.webp" alt="logo" loading="lazy" />
+      </a>
+      
+      <!-- Mobile Menu Hamburger Button -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <div class="headerLinks" id="navLinks">
+        <a href="index.html"> Home</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="formContainer">
+    <form action="index.html" method="GET">
+      <h1 class="formContainerW">Welcome Back</h1>
+      
+      <div class="formGroup">
+        <label>Username / Email</label>
+        <div >
+          <input type="text" placeholder="Enter your name" required />
+        </div>
+      </div>
+
+      <div class="formGroup">
+        <label>Password</label>
+        <div>
+          <input type="password" placeholder="Enter your password" required />
+        </div>
+      </div>
+
+      <div >
+        <button type="submit" class="btn">Sign In</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
